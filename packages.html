@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paket Wisata | MEDAN TOBA SUMATERA TOUR & TRAVEL</title>
+  <title data-i18n="section-packages">Paket Wisata Populer | MEDAN TOBA SUMATERA</title>
   <meta name="description" content="Lihat semua paket wisata dari Medan ke Danau Toba: 1 hari, 2D1N, 3D2N, dan paket kustom. Harga transparan, supir Muslim, mobil bersih." />
 
   <!-- Google Fonts -->
@@ -90,7 +90,7 @@
 <body class="bg-white text-gray-800 font-inter transition-colors duration-300">
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/6281397606622?text=Halo%20MEDAN%20TOBA%20SUMATERA%20TOUR%20%26%20TRAVEL!%20Saya%20mau%20tanya%20tentang%20paket%20wisata." target="_blank" class="whatsapp-float">
+  <a href="https://wa.me/6281397606622?text=Halo%20MEDAN%20TOBA%20SUMATERA%20TOUR%20%26%20TRAVEL!" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -106,19 +106,36 @@
         </div>
       </div>
 
-      <!-- Navigation -->
+      <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-8">
-        <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Beranda</a>
-        <a href="packages.html" class="text-sm font-medium text-green-600 border-b-2 border-green-600">Paket Wisata</a>
-        <a href="gallery.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Galeri</a>
-        <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Tentang Kami</a>
-        <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Kontak</a>
+        <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-home">Beranda</a>
+        <a href="packages.html" class="text-sm font-medium text-green-600 border-b-2 border-green-600" data-i18n="nav-packages">Paket Wisata</a>
+        <a href="gallery.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-gallery">Galeri</a>
+        <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-about">Tentang Kami</a>
+        <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-contact">Kontak</a>
       </nav>
 
       <!-- Theme & Language Toggle -->
       <div class="flex items-center space-x-4">
         <button id="theme-toggle" class="text-gray-700 dark:text-gray-300"><i class="fas fa-moon"></i></button>
-        <button id="lang-toggle" class="text-sm font-medium text-gray-700 dark:text-gray-300">EN</button>
+        <button id="lang-toggle" class="text-sm font-medium text-gray-700 dark:text-gray-300" data-i18n="lang-toggle">EN</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+      <div class="px-6 py-4 space-y-3 text-gray-800 dark:text-gray-200">
+        <a href="index.html" class="block py-2.5" data-i18n="nav-home">Beranda</a>
+        <a href="packages.html" class="block py-2.5" data-i18n="nav-packages">Paket Wisata</a>
+        <a href="gallery.html" class="block py-2.5" data-i18n="nav-gallery">Galeri</a>
+        <a href="about.html" class="block py-2.5" data-i18n="nav-about">Tentang Kami</a>
+        <a href="contact.html" class="block py-2.5" data-i18n="nav-contact">Kontak</a>
+        <div class="flex space-x-4 mt-4">
+          <button id="theme-toggle-mobile" class="text-gray-700 dark:text-gray-300">
+            <i class="fas fa-moon"></i> <span data-i18n="theme-toggle">Mode Gelap</span>
+          </button>
+          <button id="lang-toggle-mobile" class="text-gray-700 dark:text-gray-300" data-i18n="lang-toggle">EN</button>
+        </div>
       </div>
     </div>
   </header>
@@ -140,8 +157,8 @@
         <!-- Paket 1 Hari -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
           <div class="p-6 text-center">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="package-title-1">Paket 1 Hari</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="package-price-1">Rp 750rb/orang</p>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="package-1-title">Paket 1 Hari</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="package-1-price">Rp 750rb/orang</p>
             <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
               <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-driver">Supir Muslim</span></li>
               <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-bbm">BBM & Parkir</span></li>
@@ -154,12 +171,12 @@
           </div>
         </div>
 
-        <!-- Paket 2D1N -->
+        <!-- Paket 2 Hari 1 Malam -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
           <div class="p-6 text-center">
             <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block" data-i18n="badge-best">BEST SELLER</span>
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="package-title-2">Paket 2 Hari 1 Malam</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="package-price-2">Rp 1.500.000 / orang</p>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="package-2-title">Paket 2 Hari 1 Malam</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="package-2-price">Mulai Rp 1.5jt/orang</p>
             <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
               <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-hotel">Hotel Bintang 2</span></li>
               <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-meals">3x Makan</span></li>
@@ -172,39 +189,36 @@
           </div>
         </div>
 
-        <!-- Paket 3D2N -->
+        <!-- Paket 3 Hari 2 Malam -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
           <div class="p-6 text-center">
-            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block" data-i18n="badge-hotel">HOTEL TERMASUK</span>
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Paket 3 Hari 2 Malam</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4">Mulai Rp 2.8jt/orang</p>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="package-3-title">Paket 3 Hari 2 Malam</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="package-3-price">Mulai Rp 2.8jt/orang</p>
             <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>2 Malam Hotel</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>6x Makan</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Wisata Lengkap</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Supir + Guide</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-hotel">2 Malam Hotel</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-meals">6x Makan</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-ticket">Wisata Lengkap</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="feat-guide">Supir + Guide</span></li>
             </ul>
             <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20paket%203%20hari." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
-              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+              <i class="fab fa-whatsapp mr-2"></i> <span data-i18n="btn-book-now">Booking Sekarang</span>
             </a>
           </div>
         </div>
 
-        <!-- Paket Kustom -->
+        <!-- Paket Custom -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in md:col-span-3">
           <div class="p-6 text-center">
-            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="custom-trip-title">Paket Kustom</h3>
-            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="custom-trip-price">Harga Negosiasi</p>
-            <p class="text-gray-600 dark:text-gray-300 mb-6" data-i18n="custom-desc">Itinerary sesuai keinginan Anda</p>
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="custom-title">Custom Trip</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="custom-price">Harga Negosiasi</p>
             <ul class="flex flex-wrap justify-center gap-4 mb-6 text-sm text-gray-700 dark:text-gray-300">
-              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-flex">Fleksibel</span></li>
+              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-flex">Itinerary Fleksibel</span></li>
               <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-hotel">Pilihan Hotel</span></li>
               <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-car">Semua Jenis Mobil</span></li>
-              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-guide">Supir + Guide</span></li>
               <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-consult">Konsultasi Gratis</span></li>
             </ul>
             <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20ingin%20paket%20kustom." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
-              <i class="fab fa-whatsapp mr-2"></i> <span data-i18n="btn-consult">Diskusikan Sekarang</span>
+              <i class="fab fa-whatsapp mr-2"></i> <span data-i18n="btn-consult">Konsultasi Gratis</span>
             </a>
           </div>
         </div>
@@ -230,11 +244,11 @@
         <div>
           <h4 class="font-semibold mb-4">Navigasi</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="index.html" class="hover:text-white">Beranda</a></li>
-            <li><a href="packages.html" class="hover:text-white">Paket Wisata</a></li>
-            <li><a href="gallery.html" class="hover:text-white">Galeri</a></li>
-            <li><a href="about.html" class="hover:text-white">Tentang Kami</a></li>
-            <li><a href="contact.html" class="hover:text-white">Kontak</a></li>
+            <li><a href="index.html" class="hover:text-white" data-i18n="nav-home">Beranda</a></li>
+            <li><a href="packages.html" class="hover:text-white" data-i18n="nav-packages">Paket Wisata</a></li>
+            <li><a href="gallery.html" class="hover:text-white" data-i18n="nav-gallery">Galeri</a></li>
+            <li><a href="about.html" class="hover:text-white" data-i18n="nav-about">Tentang Kami</a></li>
+            <li><a href="contact.html" class="hover:text-white" data-i18n="nav-contact">Kontak</a></li>
           </ul>
         </div>
         <div>
@@ -254,27 +268,155 @@
 
   <!-- JavaScript -->
   <script>
-    // Theme Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // === Terjemahan ===
+    const translations = {
+      id: {
+        "section-packages": "Paket Wisata Populer",
+        "section-packages-desc": "Pilih paket yang sesuai dengan waktu dan anggaran Anda.",
+        "package-1-title": "Paket 1 Hari",
+        "package-1-price": "Rp 750rb/orang",
+        "package-2-title": "Paket 2 Hari 1 Malam",
+        "package-2-price": "Mulai Rp 1.5jt/orang",
+        "package-3-title": "Paket 3 Hari 2 Malam",
+        "package-3-price": "Mulai Rp 2.8jt/orang",
+        "badge-best": "BEST SELLER",
+        "custom-title": "Custom Trip",
+        "custom-price": "Harga Negosiasi",
+        "custom-flex": "Itinerary Fleksibel",
+        "custom-hotel": "Pilihan Hotel",
+        "custom-car": "Semua Jenis Mobil",
+        "custom-consult": "Konsultasi Gratis",
+        "feat-driver": "Supir Muslim",
+        "feat-bbm": "BBM & Parkir",
+        "feat-lunch": "Makan Siang",
+        "feat-guide": "Guide Lokal",
+        "feat-hotel": "Hotel Bintang 2",
+        "feat-meals": "3x Makan",
+        "feat-ticket": "Tiket Wisata",
+        "feat-water": "Air Mineral",
+        "btn-book-now": "Booking Sekarang",
+        "btn-consult": "Konsultasi Gratis",
+        "footer-desc": "Travel lokal terpercaya dengan supir Muslim. Kami menghadirkan pengalaman wisata Danau Toba yang nyaman, halal, dan berkesan.",
+        "nav-home": "Beranda",
+        "nav-packages": "Paket Wisata",
+        "nav-gallery": "Galeri",
+        "nav-about": "Tentang Kami",
+        "nav-contact": "Kontak",
+        "lang-toggle": "EN",
+        "theme-toggle": "Mode Gelap"
+      },
+      en: {
+        "section-packages": "Popular Tour Packages",
+        "section-packages-desc": "Choose a package that suits your time and budget.",
+        "package-1-title": "1-Day Package",
+        "package-1-price": "IDR 750k/person",
+        "package-2-title": "2 Days 1 Night",
+        "package-2-price": "From IDR 1.5M/person",
+        "package-3-title": "3 Days 2 Nights",
+        "package-3-price": "From IDR 2.8M/person",
+        "badge-best": "BEST SELLER",
+        "custom-title": "Custom Trip",
+        "custom-price": "Negotiable Price",
+        "custom-flex": "Flexible Itinerary",
+        "custom-hotel": "Hotel Options",
+        "custom-car": "All Car Types",
+        "custom-consult": "Free Consultation",
+        "feat-driver": "Muslim Driver",
+        "feat-bbm": "Fuel & Parking",
+        "feat-lunch": "Lunch",
+        "feat-guide": "Local Guide",
+        "feat-hotel": "2-Star Hotel",
+        "feat-meals": "3 Meals",
+        "feat-ticket": "Entrance Tickets",
+        "feat-water": "Mineral Water",
+        "btn-book-now": "Book Now",
+        "btn-consult": "Free Consultation",
+        "footer-desc": "Trusted local travel with Muslim drivers. We bring you a comfortable, halal, and memorable Lake Toba experience.",
+        "nav-home": "Home",
+        "nav-packages": "Tour Packages",
+        "nav-gallery": "Gallery",
+        "nav-about": "About Us",
+        "nav-contact": "Contact",
+        "lang-toggle": "ID",
+        "theme-toggle": "Light Mode"
+      }
+    };
 
-    if (currentTheme === 'dark') html.classList.add('dark');
-    themeToggle.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    // === Variabel Global ===
+    let currentLang = localStorage.getItem('toba-lang') || 'id';
+    let currentTheme = localStorage.getItem('toba-theme') || 'light';
 
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('theme', newTheme);
-      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    // === Terapkan Bahasa ===
+    function applyLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+            el.placeholder = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+      document.documentElement.lang = lang;
+      document.title = translations[lang]['section-packages'] + " | MEDAN TOBA SUMATERA";
+    }
+
+    // === Terapkan Tema ===
+    function applyTheme(theme) {
+      const html = document.documentElement;
+      if (theme === 'dark') {
+        html.classList.add('dark');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-sun"></i>';
+        document.getElementById('theme-toggle-mobile').innerHTML = '<i class="fas fa-sun"></i> <span data-i18n="theme-toggle">Mode Terang</span>';
+      } else {
+        html.classList.remove('dark');
+        document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
+        document.getElementById('theme-toggle-mobile').innerHTML = '<i class="fas fa-moon"></i> <span data-i18n="theme-toggle">Mode Gelap</span>';
+      }
+      applyLanguage(currentLang);
+    }
+
+    // === Inisialisasi ===
+    document.addEventListener("DOMContentLoaded", () => {
+      applyLanguage(currentLang);
+      applyTheme(currentTheme);
+
+      document.getElementById('lang-toggle').textContent = currentLang === 'id' ? 'EN' : 'ID';
+      document.getElementById('lang-toggle-mobile').textContent = currentLang === 'id' ? 'EN' : 'ID';
     });
 
-    // Language Toggle
-    document.getElementById('lang-toggle').addEventListener('click', () => {
-      alert("Fitur multibahasa akan aktif setelah integrasi dengan index.html.");
+    // === Ganti Bahasa ===
+    document.getElementById('lang-toggle')?.addEventListener('click', () => {
+      currentLang = currentLang === 'id' ? 'en' : 'id';
+      applyLanguage(currentLang);
+      localStorage.setItem('toba-lang', currentLang);
+      document.getElementById('lang-toggle').textContent = currentLang === 'id' ? 'EN' : 'ID';
+      document.getElementById('lang-toggle-mobile').textContent = currentLang === 'id' ? 'EN' : 'ID';
     });
 
-    // Fade-in on scroll
+    document.getElementById('lang-toggle-mobile')?.addEventListener('click', () => {
+      currentLang = currentLang === 'id' ? 'en' : 'id';
+      applyLanguage(currentLang);
+      localStorage.setItem('toba-lang', currentLang);
+      document.getElementById('lang-toggle').textContent = currentLang === 'id' ? 'EN' : 'ID';
+      document.getElementById('lang-toggle-mobile').textContent = currentLang === 'id' ? 'EN' : 'ID';
+    });
+
+    // === Ganti Tema ===
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('toba-theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+
+    document.getElementById('theme-toggle-mobile')?.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('toba-theme', currentTheme);
+      applyTheme(currentTheme);
+    });
+
+    // === Fade-in saat scroll ===
     const faders = document.querySelectorAll('.fade-in');
     const appearOnScroll = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -284,6 +426,11 @@
       });
     }, { threshold: 0.1 });
     faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // === Mobile Menu Toggle ===
+    document.getElementById('menu-toggle')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
