@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Kami | MEDAN TOBA SUMATERA TOUR & TRAVEL</title>
+  <meta name="description" content="Hubungi MEDAN TOBA SUMATERA TOUR & TRAVEL untuk pertanyaan, booking, atau konsultasi paket wisata ke Danau Toba. WhatsApp: +62 813-9760-6622." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            secondary: '#10b981',
+            accent: '#8b5cf6',
+            'bg-dark': '#0f172a',
+            'card-dark': '#1e293b'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .hero-bg {
+      background-image: url('https://picsum.photos/id/345/1600/900');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 30, 60, 0.7) 100%);
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      color: white;
+      padding: 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .contact-info-item {
+      transition: transform 0.3s ease;
+    }
+    .contact-info-item:hover {
+      transform: translateY(-4px);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-inter transition-colors duration-300">
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6281397606622?text=Halo%20MEDAN%20TOBA%20SUMATERA%20TOUR%20%26%20TRAVEL!" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white/90 dark:bg-gray-900/95 backdrop-blur-md shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="Logo MEDAN TOBA SUMATERA" class="w-10 h-10 object-contain">
+        <div>
+          <h3 class="text-lg font-bold">MEDAN TOBA SUMATERA</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400">Tour & Travel</p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Beranda</a>
+        <a href="packages.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Paket Wisata</a>
+        <a href="gallery.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Galeri</a>
+        <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-green-600">Tentang Kami</a>
+        <a href="contact.html" class="text-sm font-medium text-green-600 border-b-2 border-green-600">Kontak</a>
+      </nav>
+
+      <!-- Theme & Language Toggle -->
+      <div class="flex items-center space-x-4">
+        <button id="theme-toggle" class="text-gray-700 dark:text-gray-300"><i class="fas fa-moon"></i></button>
+        <button id="lang-toggle" class="text-sm font-medium text-gray-700 dark:text-gray-300">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-28 pb-16 hero-bg hero-content text-white">
+    <div class="hero-overlay"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="contact-title">Hubungi Kami</h1>
+      <p class="text-lg" data-i18n="contact-desc">Pesan sekarang atau konsultasikan rencana perjalananmu.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="py-24 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+
+      <!-- Informasi Kontak -->
+      <div class="space-y-8">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Informasi Kontak</h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          Kami siap membantu Anda merencanakan perjalanan impian ke Danau Toba. Hubungi kami kapan saja!
+        </p>
+
+        <!-- WhatsApp -->
+        <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl shadow-md contact-info-item fade-in">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center">
+              <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold">WhatsApp</h3>
+              <a href="https://wa.me/6281397606622" target="_blank" class="text-green-600 hover:underline">+62 813-9760-6622</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl shadow-md contact-info-item fade-in">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center">
+              <i class="far fa-envelope text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold">Email</h3>
+              <a href="mailto:info@tobatravel.com" class="text-blue-600 hover:underline">info@tobatravel.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lokasi Jemput -->
+        <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl shadow-md contact-info-item fade-in">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-purple-600 text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold" data-i18n="contact-pickup">Lokasi Jemput</h3>
+              <p class="text-gray-600 dark:text-gray-300">Medan & Bandara Kualanamu</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="fade-in">
+          <h3 class="font-semibold mb-3">Lokasi Kami</h3>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.771146244792!2d98.66576889999999!3d3.59516625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e75e921d609%3A0xc68297b4869c9b60!2sMedan%2C%20North%20Sumatra%2C%20Indonesia!5e0!3m2!1sen!2s!4v1690805166567!5m2!1sen!2s" 
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+      <!-- Formulir Kontak -->
+      <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-xl fade-in">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Formulir Booking</h2>
+        <form id="booking-form" action="https://wa.me/6281397606622" target="_blank" class="space-y-5">
+          <div>
+            <label class="block text-sm font-medium mb-1" data-i18n="form-name">Nama Lengkap</label>
+            <input type="text" name="name" placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2 rounded-lg text-gray-800 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" data-i18n="form-date">Tanggal Perjalanan</label>
+            <input type="date" name="date" class="w-full px-4 py-2 rounded-lg text-gray-800 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" data-i18n="form-people">Jumlah Orang</label>
+            <input type="number" name="people" placeholder="2" class="w-full px-4 py-2 rounded-lg text-gray-800 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1" data-i18n="form-pickup">Lokasi Jemput</label>
+            <input type="text" name="pickup" placeholder="Hotel, Bandara, dll" class="w-full px-4 py-2 rounded-lg text-gray-800 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Pesan Tambahan</label>
+            <textarea name="message" rows="4" placeholder="Contoh: Butuh kursi bayi, preferensi makanan, dll" class="w-full px-4 py-2 rounded-lg text-gray-800 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-green-500 focus:border-transparent"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors duration-300" data-i18n="form-submit">
+            Kirim ke WhatsApp
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800 text-center">
+    <div class="max-w-4xl mx-auto px-6 fade-in">
+      <h2 class="text-3xl font-bold mb-4">Siap untuk Petualangan?</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">Rencanakan perjalanan Anda ke Danau Toba bersama kami hari ini.</p>
+      <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20ingin%20booking%20paket%20wisata." target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold">
+        📱 Pesan Sekarang
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-black text-white py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-5">
+            <img src="logo.png" alt="Logo" class="w-12 h-12 object-contain">
+            <div>
+              <h3 class="text-2xl font-bold">MEDAN TOBA SUMATERA</h3>
+              <p class="text-blue-200">Tour & Travel</p>
+            </div>
+          </div>
+          <p class="text-gray-400" data-i18n="footer-desc">Travel lokal terpercaya dengan supir Muslim. Kami menghadirkan pengalaman wisata Danau Toba yang nyaman, halal, dan berkesan.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="index.html" class="hover:text-white">Beranda</a></li>
+            <li><a href="packages.html" class="hover:text-white">Paket Wisata</a></li>
+            <li><a href="gallery.html" class="hover:text-white">Galeri</a></li>
+            <li><a href="about.html" class="hover:text-white">Tentang Kami</a></li>
+            <li><a href="contact.html" class="hover:text-white">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Kontak</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>📱 +62 813-9760-6622</li>
+            <li>📧 info@tobatravel.com</li>
+            <li>📍 Medan, Sumatera Utara</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 MEDAN TOBA SUMATERA TOUR & TRAVEL. Dibuat dengan ❤️ untuk wisatawan Indonesia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    if (currentTheme === 'dark') html.classList.add('dark');
+    themeToggle.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+      localStorage.setItem('theme', newTheme);
+      themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+
+    // Language Toggle
+    document.getElementById('lang-toggle').addEventListener('click', () => {
+      alert("Fitur multibahasa akan aktif setelah integrasi dengan index.html.");
+    });
+
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('active');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Form submission with custom message
+    document.getElementById('booking-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const date = formData.get('date');
+      const people = formData.get('people');
+      const pickup = formData.get('pickup');
+      const message = formData.get('message') || '-';
+      
+      const waMessage = `Halo MEDAN TOBA SUMATERA TOUR & TRAVEL!%0A%0ASaya ingin booking:%0ANama: ${name}%0ATanggal: ${date}%0AJumlah: ${people}%0AJemput: ${pickup}%0APesan: ${message}`;
+      
+      window.open(`https://wa.me/6281397606622?text=${waMessage}`, '_blank');
+    });
+  </script>
+</body>
+</html>
