@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" id="html-tag" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -31,28 +31,78 @@
     }
   </script>
 
-  
   <style>
-  .hero-bg {
-    background-image: url('danau-toba.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-  }
-  .hero-overlay {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-  }
-</style>
-
-<section id="home" class="pt-28 pb-16 hero-bg hero-content text-white">
-  <div class="hero-overlay"></div>
-  <!-- Konten tetap sama -->
-</section>
-
+    .hero-bg {
+      background-image: url('hero-danau-toba.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 30, 60, 0.7) 100%);
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    .btn-whatsapp {
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      color: white;
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(37, 211, 102, 0.4);
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      color: white;
+      padding: 16px;
+      border-radius: 50%;
+      font-size: 24px;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .package-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .package-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-video {
+      position: relative;
+    }
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 24px;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800 font-inter transition-colors duration-300">
@@ -76,11 +126,11 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-8">
-        <a href="#home" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-home">Beranda</a>
-        <a href="packages.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-packages">Paket Wisata</a>
-        <a href="gallery.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-gallery">Galeri</a>
-        <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-about">Tentang Kami</a>
-        <a href="contact.html" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-contact">Kontak</a>
+        <a href="#home" class="text-sm font-medium text-green-600 border-b-2 border-green-600" data-i18n="nav-home">Beranda</a>
+        <a href="#packages" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-packages">Paket Wisata</a>
+        <a href="#gallery" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-gallery">Galeri</a>
+        <a href="#about" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-about">Tentang Kami</a>
+        <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-green-600" data-i18n="nav-contact">Kontak</a>
       </nav>
 
       <!-- Theme & Language Toggle -->
@@ -217,16 +267,118 @@
           </div>
         </div>
 
+        <!-- Template 4 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">One Day Trip</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Rp 650rb/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Medan - Toba PP</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Guide Lokal</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Makan Siang</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Photo Stop</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20One%20Day%20Trip." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 5 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Family Trip 4 Hari</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Mulai Rp 3.2jt/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>3 Malam Hotel</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>8x Makan</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Wisata Anak</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Kursi Bayi</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Family%20Trip." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 6 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Paket Honeymoon</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Mulai Rp 4jt/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Hotel Premium</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Dinner Romantis</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Private Tour</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Photo Session</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Honeymoon%20Package." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 7 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Ziarah & Wisata</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Mulai Rp 2.5jt/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Masjid Tua Toba</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Hotel Syariah</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Guide Muslim</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Makan Halal</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Ziarah%20&%20Wisata." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 8 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Adventure Tour</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Mulai Rp 3.5jt/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Trekking</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Camping</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Guide Profesional</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Peralatan Lengkap</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20Adventure%20Tour." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
+        <!-- Template 9 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in">
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Tour Medan City</h3>
+            <p class="text-3xl font-extrabold text-green-600 mb-4">Rp 500rb/orang</p>
+            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>City Tour Medan</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Masjid Raya</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Belanja Oleh-oleh</span></li>
+              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span>Makan Siang</span></li>
+            </ul>
+            <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20minat%20City%20Tour%20Medan." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
+              <i class="fab fa-whatsapp mr-2"></i> Booking Sekarang
+            </a>
+          </div>
+        </div>
+
         <!-- Paket Custom -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in md:col-span-3 lg:col-span-1">
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden package-card fade-in md:col-span-3">
           <div class="p-6 text-center">
             <h3 class="text-2xl font-bold text-gray-800 dark:text-white" data-i18n="custom-title">Custom Trip</h3>
             <p class="text-3xl font-extrabold text-green-600 mb-4" data-i18n="custom-price">Harga Negosiasi</p>
-            <ul class="text-left space-y-2 mb-6 text-gray-700 dark:text-gray-300">
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-flex">Itinerary Fleksibel</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-hotel">Pilihan Hotel</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-car">Semua Jenis Mobil</span></li>
-              <li class="flex items-center space-x-2"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-consult">Konsultasi Gratis</span></li>
+            <ul class="flex flex-wrap justify-center gap-4 mb-6 text-sm text-gray-700 dark:text-gray-300">
+              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-flex">Itinerary Fleksibel</span></li>
+              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-hotel">Pilihan Hotel</span></li>
+              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-car">Semua Jenis Mobil</span></li>
+              <li class="flex items-center space-x-1"><i class="fas fa-check text-green-500"></i> <span data-i18n="custom-consult">Konsultasi Gratis</span></li>
             </ul>
             <a href="https://wa.me/6281397606622?text=Halo!%20Saya%20ingin%20paket%20kustom." target="_blank" class="btn-whatsapp w-full py-3 rounded-xl flex items-center justify-center font-semibold">
               <i class="fab fa-whatsapp mr-2"></i> <span data-i18n="btn-consult">Konsultasi Gratis</span>
@@ -248,32 +400,32 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
         <!-- Foto -->
-        <img src="https://picsum.photos/id/433/300/300" alt="Wisata 1" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
-        <img src="https://picsum.photos/id/1040/300/300" alt="Wisata 2" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
-        <img src="https://picsum.photos/id/1074/300/300" alt="Wisata 3" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
-        <img src="https://picsum.photos/id/180/300/300" alt="Wisata 4" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
+        <img src="foto1.jpg" alt="Wisata 1" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
+        <img src="foto2.jpg" alt="Wisata 2" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
+        <img src="foto3.jpg" alt="Wisata 3" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
+        <img src="foto4.jpg" alt="Wisata 4" class="rounded-lg shadow-md object-cover h-48 w-full fade-in">
 
         <!-- Video -->
         <div class="gallery-video relative fade-in">
-          <img src="https://picsum.photos/id/1040/300/300" alt="Video 1" class="rounded-lg shadow-md object-cover h-48 w-full">
+          <img src="video1-thumb.jpg" alt="Video 1" class="rounded-lg shadow-md object-cover h-48 w-full">
           <div class="play-icon">
             <i class="fas fa-play"></i>
           </div>
         </div>
         <div class="gallery-video relative fade-in">
-          <img src="https://picsum.photos/id/433/300/300" alt="Video 2" class="rounded-lg shadow-md object-cover h-48 w-full">
+          <img src="video2-thumb.jpg" alt="Video 2" class="rounded-lg shadow-md object-cover h-48 w-full">
           <div class="play-icon">
             <i class="fas fa-play"></i>
           </div>
         </div>
         <div class="gallery-video relative fade-in">
-          <img src="https://picsum.photos/id/1074/300/300" alt="Video 3" class="rounded-lg shadow-md object-cover h-48 w-full">
+          <img src="video3-thumb.jpg" alt="Video 3" class="rounded-lg shadow-md object-cover h-48 w-full">
           <div class="play-icon">
             <i class="fas fa-play"></i>
           </div>
         </div>
         <div class="gallery-video relative fade-in">
-          <img src="https://picsum.photos/id/180/300/300" alt="Video 4" class="rounded-lg shadow-md object-cover h-48 w-full">
+          <img src="video4-thumb.jpg" alt="Video 4" class="rounded-lg shadow-md object-cover h-48 w-full">
           <div class="play-icon">
             <i class="fas fa-play"></i>
           </div>
@@ -286,7 +438,7 @@
   <section id="about" class="py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
       <div class="fade-in">
-        <img src="https://picsum.photos/id/1074/800/600" alt="Supir Lokal" class="rounded-3xl shadow-2xl w-full object-cover" style="height: 420px;">
+        <img src="supir.jpg" alt="Supir Lokal" class="rounded-3xl shadow-2xl w-full object-cover" style="height: 420px;">
       </div>
       <div class="space-y-6 fade-in">
         <h2 class="text-3xl md:text-4xl font-bold" data-i18n="about-title">Tentang Kami</h2>
@@ -367,10 +519,10 @@
         <div>
           <h4 class="font-semibold mb-4" data-i18n="footer-services">Layanan</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white" data-i18n="package-1-title">Paket 1 Hari</a></li>
-            <li><a href="#" class="hover:text-white" data-i18n="package-2-title">Paket 2 Hari</a></li>
-            <li><a href="#" class="hover:text-white" data-i18n="package-3-title">Paket 3 Hari</a></li>
-            <li><a href="#" class="hover:text-white" data-i18n="custom-title">Custom Trip</a></li>
+            <li><a href="#packages" class="hover:text-white" data-i18n="package-1-title">Paket 1 Hari</a></li>
+            <li><a href="#packages" class="hover:text-white" data-i18n="package-2-title">Paket 2 Hari</a></li>
+            <li><a href="#packages" class="hover:text-white" data-i18n="package-3-title">Paket 3 Hari</a></li>
+            <li><a href="#packages" class="hover:text-white" data-i18n="custom-title">Custom Trip</a></li>
           </ul>
         </div>
         <div>
@@ -518,13 +670,7 @@
     function applyLanguage(lang) {
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-          if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-            el.placeholder = translations[lang][key];
-          } else {
-            el.textContent = translations[lang][key];
-          }
-        }
+        if (translations[lang][key]) el.textContent = translations[lang][key];
       });
       document.documentElement.lang = lang;
       document.title = translations[lang].title;
@@ -542,7 +688,6 @@
         document.getElementById('theme-toggle').innerHTML = '<i class="fas fa-moon"></i>';
         document.getElementById('theme-toggle-mobile').innerHTML = '<i class="fas fa-moon"></i> <span data-i18n="theme-toggle">Mode Gelap</span>';
       }
-      // Update text in mobile menu
       applyLanguage(currentLang);
     }
 
@@ -550,7 +695,6 @@
     document.addEventListener("DOMContentLoaded", () => {
       applyLanguage(currentLang);
       applyTheme(currentTheme);
-
       document.getElementById('lang-toggle').textContent = currentLang === 'id' ? 'EN' : 'ID';
       document.getElementById('lang-toggle-mobile').textContent = currentLang === 'id' ? 'EN' : 'ID';
     });
